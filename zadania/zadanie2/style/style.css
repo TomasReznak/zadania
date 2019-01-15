@@ -1,0 +1,521 @@
+/*
+
+    Name   : Tomas Reznak
+    Email  : t.reznak@gmail.com
+
+    *****************************************
+
+    - General CSS
+    - Main (hero) section
+      - tmavší background image
+      - gradient cez background image
+      - biely výrez do pozadia
+      - hlavný kontent
+        - navigácia
+        - textová sekcia
+    - Button/span effect and animation
+    - Responsive CSS
+    - Menu hamburger animation
+
+*/
+
+
+/*		General CSS		*/
+  body {
+    padding: 0px;
+    margin: 0px;
+    background: white;
+    font-family: 'Open Sans',sans-serif;
+  }
+
+  a {
+  color: white;
+  text-decoration: none;
+  }
+
+  button {
+    font-size: 0.75em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Open Sans',sans-serif;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+
+  ::-moz-selection { /* Code for Firefox */
+    background: #3c48b4;
+  }
+
+  ::selection {
+    background: #3c48b4;
+  }
+
+  .desktop-hide {
+    display: none;
+  }
+
+  /* end general CSS */
+
+
+  /* main (hero) section */
+
+  .hero {
+    width: 100%;
+    height: 650px;
+    background-image: url(../img/frontend-wanted.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+
+  .hero_back_black {  /* tmavší background image */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 650px;
+    background: black;
+    opacity: 0.67;
+    z-index: -20;
+  }
+
+  .hero_back_grad {  /* gradient cez background image */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 650px;
+    background: #4d5ff9; /* Old browsers */
+    background: -moz-linear-gradient(left, #4d5ff9 0%, #3386dd 50%, #18adc0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #4d5ff9 0%, #3386dd 50%, #18adc0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #4d5ff9 0%, #3386dd 50%, #18adc0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    opacity: 0.7;
+    z-index: -10;
+  }
+
+      /* biely výrez do pozadia */
+
+      .hero:before, .hero:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 48%;
+        border-bottom: 40px solid white;
+        z-index: 100;
+    }
+
+      .hero:before {
+        left: 0;
+        border-right: 40px solid transparent;
+      }
+
+      .hero:after {
+        right: 0;
+        border-left: 40px solid transparent;
+      }
+
+  /* hlavný kontent */
+
+  .content {
+    max-width: 1080px;
+    margin: 0 auto;
+    color: white;
+    z-index: 100;
+  }
+
+      /* navigácia */
+
+      nav {
+        width: 100%;
+        height: 100px;
+        border-bottom: solid 1px rgba(255,255,255,0.1);
+        text-transform: uppercase;
+      }
+
+      .logo {
+        width: 200px;
+        height: 100%;
+        float: left;
+        padding: 0 20px;
+      }
+
+      .logo a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        transition: 0.3s ease;
+      }
+
+      .logo:hover a{
+        opacity: 0.8;
+        transition: 0.3s ease;
+      }
+
+      .logo a span{
+        font-size: 20px
+      }
+
+      .drop-menu {
+        display: none;
+      }
+
+      nav .main-menu {
+        display: flex;
+        height: 100%;
+        float: right;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav .main-menu li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+      }
+
+      nav .main-menu li:hover {
+        color: white;
+        cursor: pointer;
+        border-bottom: 1px solid white;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: 0.3s ease;
+      }
+
+      nav .main-menu li a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+      }
+
+
+      nav .main-menu li:hover a {
+        color: white;
+        transition: 0.3s ease;
+      }
+
+      /* koniec navigácie */
+
+  /* textová sekcia */
+
+  .content section {
+    width: 45%;
+    min-width: 500px;
+    color: white;
+    padding: 10% 5%;
+  }
+
+  /* koniec textovej sekcie */
+
+  /* Button/span effect and animation */
+
+  .ozivit_dizajn {  /*bold text v odstavci */
+    font-weight: bold;
+    position: relative;
+  }
+
+  .ozivit_dizajn:hover::after {  /*efekt bubliny na text v odstavci (stvorec) */
+    content: "To som presne ja :)";
+    display: block;
+    font-weight: 300;
+    font-size: 0.8em;
+    padding: 4px 14px;
+    width: 140px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    border-radius: 5px;
+    background: #0099cc;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+
+  .ozivit_dizajn:hover::before {  /*efekt bubliny na text v odstavci (trojuholnik) */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 20px solid #0099cc;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+
+  @-webkit-keyframes blink {  /* blink efekt na button */
+   from {opacity: 1.0;}
+   to {opacity: 0.7;}
+ }
+
+.main_button {
+  padding: 12px 22px;
+  margin: 10px 2px;
+  background-color: #0099cc;
+  color: white;
+  border-radius: 5px;
+  border: none;
+
+  /* nastavenie blink animácie */
+
+  -webkit-animation: blink 1s linear 5s 3; /* Safari 4+ */
+  -moz-animation:    blink 1s linear 5s 3; /* Fx 5+ */
+  -o-animation:      blink 1s linear 5s 3; /* Opera 12+ */
+  animation:         blink 1s linear 5s 3; /* IE 10+, Fx 29+ */
+
+  /* nastavenie hover effectu */
+
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main_button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #3b48b3;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+}
+.main_button:hover::before{
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.info_button {
+  padding: 12px 18px;
+  margin: 10px 2px;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  text-decoration: underline;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.info_button:hover {
+  opacity: 0.9;
+}
+
+
+/* Responsive CSS */
+
+@media screen and (max-width:800px) {
+
+  nav .main-menu {
+    display: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  nav {
+    height: 80px;
+    position: relative;
+  }
+
+  .mobile_header {
+    display: flex;
+    width: 40px;
+    height: 100%;
+    margin: 0 20px;
+    float: right;
+    align-items: center;
+  }
+
+  #nav-icon {
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  #nav-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+  #nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #nav-icon span:nth-child(2) {
+    top: 14px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #nav-icon span:nth-child(3) {
+    top: 28px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #nav-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    left: 8px;
+  }
+
+  #nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  #nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 8px;
+  }
+
+  .drop-menu {
+    display: none;
+    height: auto;
+    position: absolute;
+    top:80px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid white;
+    background-color: #4752bf;
+    z-index: 1;
+    }
+
+  .drop-menu li {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 30px
+  }
+
+  .drop-menu li:hover {
+    background-color: #525dc9
+  }
+
+  .drop-menu li a {
+    color: white;
+  }
+
+  .droped {
+    display: block;
+    animation: dropdown 0.5s;
+    transform-origin: top;
+  }
+
+  @keyframes dropdown {
+    from {opacity: 0; transform:scaleY(0);}
+      to {opacity: 1; transform:scaleY(1);}
+  }
+
+  .main_button {
+    display: block;
+    width: 50%;
+    margin: 40px auto 0 auto;
+  }
+
+  .info_button {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .content section {
+    width: 80%;
+    min-width: 100px;
+    margin: 0 auto;
+  }
+
+  .ozivit_dizajn::after {
+    display: none;
+}
+
+.ozivit_dizajn::before {
+    display: none;
+}
+
+.ozivit_dizajn:hover::after {
+    display: none;
+}
+
+.ozivit_dizajn:hover::before {
+    display: none;
+
+}
+
+}

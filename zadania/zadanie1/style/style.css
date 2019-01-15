@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+h3 {
+  color: #212121;
+  padding: 6%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+b {
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background: #275459; /* Old browsers */
+  background: -moz-linear-gradient(left, #275459 0%, #1f7e71 50%, #1a9e85 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #275459 0%, #1f7e71 50%, #1a9e85 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #275459 0%, #1f7e71 50%, #1a9e85 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  z-index: 0;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/background_shapes.svg);
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.top {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.content {
+  max-width: 850px;
+  width: 95%;
+  height: 500px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.content section {
+  width: 30%;
+  margin: 1.515%;
+  float: left;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 25px -6px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 8px 25px -6px rgba(0,0,0,0.4);
+  box-shadow: 0px 8px 25px -6px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.center-image {
+  display: block;
+  width:45px;
+  margin: 20px auto;
+}
+
+ul {
+  text-align: center;
+  padding: 0 0 11% 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  color:#848484;
+  padding: 2%;
+  font-size: 0.6em;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 45px;
+  left:75%;
+  background-color: #19a488;
+  border: 0;
+  -webkit-box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.4);
+  box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.4);
+}
+
+.add-to-cart:hover {
+  background-color:#28ba9d;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.icon-cart {
+  width: 30px;
+}
+
+.price {
+  padding: 12px 0;
+  text-align: center;
+  background: #275459; /* Old browsers */
+  background: -moz-linear-gradient(left, #275459 0%, #1f7e71 50%, #1a9e85 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #275459 0%, #1f7e71 50%, #1a9e85 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #275459 0%, #1f7e71 50%, #1a9e85 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: white;
+}
+
+.amount {
+  display: block;
+  width: 100%;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+.amount b {
+  font-size: 1em;
+}
+
+.period {
+  display: block;
+  width: 100%;
+  font-size: 0.5em;
+}
+
+@media screen and (max-width:800px) {
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.content {
+  width: 60%;
+  height: 100%;
+  margin: 1% auto;
+}
+
+.content section {
+  width: 100%;
+  padding: 0;
+  margin-top: 15%;
+  float: none;
+}
+
+}

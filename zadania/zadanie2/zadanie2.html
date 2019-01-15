@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Zadanie - Reznak</title>
+    <meta name='viewport' content="width=divice-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+
+    <div class="hero">
+
+       <div class="hero_back_black"></div> <!--background darker -->
+       <div class="hero_back_grad"></div> <!--background gradient -->
+
+        <div class="content">
+
+          <nav>
+              <div class="logo">
+
+                <a href="#">
+                  <svg height="34" width="34">
+                    <circle cx="17" cy="17" r="12" stroke="white" stroke-width="2" fill="transparent" />
+                    <circle cx="17" cy="17" r="4.5" stroke="" stroke-width="1" fill="white" />
+                  </svg>
+
+                  <span>Frontenďák</span>
+                </a>
+
+              </div>
+
+              <ul class="main-menu">
+                <li> <a href="#">html</a>
+                </li>
+
+                <li> <a href="#">css</a>
+                </li>
+
+                <li> <a href="#">javascript</a>
+                </li>
+              </ul>
+
+            <div class="mobile_header">
+              <div id="nav-icon" onclick="openMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <ul id="drop-menu" class="drop-menu">
+                <li> <a href="#">html</a>
+                </li>
+
+                <li> <a href="#">css</a>
+                </li>
+
+                <li> <a href="#">javascript</a>
+                </li>
+              </ul>
+            </div>
+
+          </nav>
+
+          <section>
+
+            <h1>Možno hľadáme práve teba!</h1>
+
+            <p>
+              Hľadáme šikovného frontend vývojára s výbornou znalosťou HTML a CSS. Ak máš slabosť pre detail a <span class="ozivit_dizajn"> dokážeš oživiť dizajny</span>
+              webstránok a webových aplikácií, tak si nás človek.
+            </p>
+
+            <button type="button" name="button" class="main_button">mám záujem</button>
+            <button type="button" name="button" class="info_button">viac informácií</button>
+
+          </section>
+
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+      var hamburger = document.getElementById('nav-icon')
+      var dropMenu = document.getElementById('drop-menu')
+
+      function openMenu() {
+        hamburger.classList.toggle("open");
+        dropMenu.classList.toggle("droped");
+
+      }
+    </script>
+
+
+  </body>
+</html>
