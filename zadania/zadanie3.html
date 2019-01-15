@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Hľadá sa Front-end developer">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+    <title>Test</title>
+
+    <style media="screen">
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #2ecc71;
+      color: #333;
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+    }
+
+    h1 {
+      display: block;
+      color: #c0392b;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 60px 0 56px 85px;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    strong {
+      font-weight: normal;
+      position: relative;
+      color: #333;
+      z-index: 1;
+    }
+
+    strong::after {
+      content: '';
+      display: inline-block;
+      background-color: rgba(247,201,27,0.75);
+      padding: 0px 4px;
+      position: absolute;
+      top: -8px;
+      left: -2px;
+      bottom: 0;
+      right: -2px;
+      height: 32px;
+      z-index: -1;
+    }
+
+    #app {
+      height: 1120px;
+      width: 90%;
+      max-width: 700px;
+      margin: 56px auto;
+      border-radius: 5px;
+      box-shadow: 5px 5px 20px -10px black;
+      background-image: repeating-linear-gradient(white 0px, white 27px, #bcdbf3 28px);
+      position: relative;
+    }
+
+    #app::before {
+      content: '';
+      position: absolute;
+      left: 56px;
+      height: 100%;
+      width: 2px;
+      background: rgba(255,0,0,0.4);
+    }
+
+    p {
+      line-height: 28px;
+      margin: 0 0 0 85px;
+      width: 595px;
+      z-index: 1;
+    }
+
+    p:first-of-type::before{
+      content: '';
+      position: absolute;
+      left: 18px;
+      top:143px;
+      width: 20px;
+      height: 20px;
+      background-color: #2ecc71;
+      border-radius: 50%;
+      -webkit-box-shadow: inset 3px 3px 18px -5px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 3px 3px 18px -5px rgba(0,0,0,0.75);
+      box-shadow: inset 3px 3px 18px -5px rgba(0,0,0,0.75);
+    }
+
+    p:last-of-type::before{
+      content: '';
+      position: absolute;
+      left: 18px;
+      top:956px;
+      width: 20px;
+      height: 20px;
+      background-color: #2ecc71;
+      border-radius: 50%;
+      -webkit-box-shadow: inset 3px 3px 18px -5px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 3px 3px 18px -5px rgba(0,0,0,0.75);
+      box-shadow: inset 3px 3px 18px -5px rgba(0,0,0,0.75);
+    }
+
+
+    ul {
+      width: 542px;
+      margin:29px 0 28px 110px;
+      padding: 0;
+      z-index: 1;
+    }
+
+    li {
+      line-height: 28px;
+    }
+
+    @media screen and (max-width:800px){
+
+      body {
+        position: relative;
+        font-size: 16px;
+      }
+
+      h1 {
+        padding: 39px 0 40px 56px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      strong::after {
+        content: '';
+        display: inline-block;
+        background-color: rgba(247,201,27,0.75);
+        padding: 0px 4px;
+        position: absolute;
+        top: -1px;
+        left: -2px;
+        bottom: 0;
+        right: -2px;
+        height: 22px;
+        z-index: -1;
+      }
+
+
+      #app {
+        height: 1200px;
+        min-width: 340px;
+        width: auto;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        bottom: 20px;
+        right: 10px;
+        background-image: repeating-linear-gradient(white 0px, white 19px, #bcdbf3 20px);
+        transition: 0.5s ease;
+      }
+
+      #app::before {
+        content: '';
+        position: absolute;
+        left: 40px;
+        height: 100%;
+        width: 1px;
+        background: rgba(255,0,0,0.4);
+      }
+
+
+      p {
+        width: 75%;
+        margin: 20px 0 0 65px;
+        line-height: 20px;
+      }
+
+      p:first-of-type::before{
+        content: '';
+        position: absolute;
+        left: 13px;
+        top:102px;
+        width: 15px;
+        height: 15px;
+      }
+
+      p:last-of-type::before{
+        content: '';
+        position: absolute;
+        left: 13px;
+        top:1082px;
+        width: 15px;
+        height: 15px;
+      }
+
+      ul {
+        width: 75%;
+        margin: 20px 0 0 75px;
+      }
+
+      li {
+        line-height: 20px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+
+  <article id="app">
+
+    <h1>Front-end developer (HTML+CSS kóder)</h1>
+
+    <p>Ideálny kandidát na túto pozíciu:</p>
+    <ul>
+      <li>Má výbornú znalosť <strong>HTML5 + CSS3</strong>, pre CSS vie použiť <strong>preprocessory</strong> ako LESS, SASS a pod.</li>
+      <li>Pozná princípy <strong>responzívnych webov</strong> a vie ich aplikovať do praxe.</li>
+      <li>Vie pracovať s <strong>JavaScriptom</strong>, napr. cez framework jQuery.</li>
+      <li>Má skúsenosti s prácou v <strong>CMS systémoch</strong>, ideálne aj so spravovaním obsahu elektronického obchodu.</li>
+      <li>Ovláda prácu s <strong>template engines</strong> (napr. Smarty, Blade a iné).</li>
+      <li>Vie podľa dodaných grafických podkladov <strong>vytvoriť webstránku</strong> (front-end) tak, aby mala validný HTML a CSS kód, pričom HTML výstup by mal byť aj sémanticky správny.</li>
+      <li>Dokáže v prípade potreby <strong>odvodiť z grafického návrhu ďalšie prvky</strong> tak, aby vizuálne zapadli do celkového konceptu (napr. vzhľad dynamických elementov, jednoduché animácie atď.).</li>
+      <li>Je schopný pracovať na weboch <strong>v tíme</strong> ďalších developerov, zorientovať sa v cudzom kóde, vie použiť SVN alebo iný repozitár kódu.</li>
+      <li>Dokáže <strong>komunikovať v anglickom jazyku</strong> slovne aj písomne (tzn. porozumenie zadaniam, všeobecná komunikácia k úlohám, písanie jednoduchých dokumentácií a pod.).</li>
+    </ul>
+
+    <p>Na pracovnom pohovore by sme sa radi dozvedeli čo najviac o predchádzajúcich skúsenostiach, spôsobe práce a máme pripravených aj niekoľko otázok z oblasti HTML/CSS.</p>
+
+
+    <list></list>
+
+    <p>Záujemcovia nás môžu kontaktovať na <strong>info@platise.sk</strong>, budeme radi ak pripojíte <strong>ukážky svojej práce</strong> (linky na stránky alebo screenshoty z nepublikovaných prác)</p>
+
+  </article>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+  <script>
+
+  Vue.component ('task', {
+    template: `
+            <li><slot></slot></li>
+            `,
+
+  });
+
+  Vue.component ('list', {
+    template: `
+            <div>
+              <ul>
+                <task v-for="array in array">{{array.name}}: {{array.value}}</task>
+              </ul>
+            </div>
+            `,
+
+    data() {
+      return {
+        array: [{name: 'Termín nástupu', value: 'ASAP'}, {name: 'Ponúkaný plat', value: 'dohodou'}, {name: 'Druh pracovného pomeru', value: 'trvalý prac. pomer alebo živnosť'}, {name: 'Miesto práce', value: 'Bratislava'}]
+      }
+    }
+
+  });
+
+
+    var app = new Vue({
+      el: '#app',
+
+    })
+  </script>
+</body>
+</html>
